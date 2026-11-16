@@ -1,0 +1,38 @@
+[
+  {
+    "id": "N_1001",
+    "organizationId": "1000001",
+    "name": "Branch-SJC",
+    "productTypes": [
+      "appliance",
+      "switch",
+      "wireless"
+    ],
+    "timeZone": "America/Los_Angeles",
+    "tags": [
+      "branch"
+    ],
+    "enrollmentString": null,
+    "url": "",
+    "notes": "",
+    "isBoundToConfigTemplate": false
+  },
+  {
+    "id": "N_1002",
+    "organizationId": "1000001",
+    "name": "Branch-RTP",
+    "productTypes": [
+      "switch",
+      "wireless"
+    ],
+    "timeZone": "America/New_York",
+    "tags": [
+      "branch",
+      "lab"
+    ],
+    "enrollmentString": null,
+    "url": "",
+    "notes": "",
+    "isBoundToConfigTemplate": false
+  }
+]

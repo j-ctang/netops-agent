@@ -1,0 +1,602 @@
+[
+  {
+    "portId": "1",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 5.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "2",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 5.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "3",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 5.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "4",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 5.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "5",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "100 Mbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "6",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "10 Mbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "7",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "8",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "9",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "10",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "11",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "12",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "13",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "14",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "15",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "16",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "17",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "18",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "19",
+    "enabled": true,
+    "status": "Disconnected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "20",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "21",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "22",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "23",
+    "enabled": false,
+    "status": "Disabled",
+    "isUplink": false,
+    "errors": [],
+    "warnings": [],
+    "speed": "",
+    "duplex": "",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 0,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  },
+  {
+    "portId": "24",
+    "enabled": true,
+    "status": "Connected",
+    "isUplink": true,
+    "errors": [],
+    "warnings": [],
+    "speed": "1 Gbps",
+    "duplex": "full",
+    "usageInKb": {
+      "total": 0,
+      "sent": 0,
+      "recv": 0
+    },
+    "clientCount": 1,
+    "powerUsageInWh": 0.0,
+    "trafficInKbps": {
+      "total": 0.0,
+      "sent": 0.0,
+      "recv": 0.0
+    },
+    "securePort": {
+      "enabled": false
+    }
+  }
+]

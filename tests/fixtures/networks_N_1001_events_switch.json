@@ -1,0 +1,79 @@
+{
+  "message": null,
+  "pageStartAt": "2026-11-15T00:00:00Z",
+  "pageEndAt": "2026-11-16T10:00:00Z",
+  "events": [
+    {
+      "occurredAt": "2026-11-16T08:10:00Z",
+      "networkId": "N_1001",
+      "type": "port_status",
+      "description": "Port status change",
+      "category": "Ports",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "deviceSerial": "Q2BB-0001-0002",
+      "deviceName": "sjc-sw2",
+      "ssidNumber": null,
+      "eventData": {
+        "port": "6",
+        "old": "1Gfdx",
+        "new": "down"
+      }
+    },
+    {
+      "occurredAt": "2026-11-16T08:12:00Z",
+      "networkId": "N_1001",
+      "type": "port_status",
+      "description": "Port status change",
+      "category": "Ports",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "deviceSerial": "Q2BB-0001-0002",
+      "deviceName": "sjc-sw2",
+      "ssidNumber": null,
+      "eventData": {
+        "port": "6",
+        "old": "down",
+        "new": "1Gfdx"
+      }
+    },
+    {
+      "occurredAt": "2026-11-16T09:01:00Z",
+      "networkId": "N_1001",
+      "type": "port_status",
+      "description": "Port status change",
+      "category": "Ports",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "deviceSerial": "Q2BB-0001-0001",
+      "deviceName": "sjc-sw1",
+      "ssidNumber": null,
+      "eventData": {
+        "port": "3",
+        "old": "1Gfdx",
+        "new": "down"
+      }
+    },
+    {
+      "occurredAt": "2026-11-16T09:30:00Z",
+      "networkId": "N_1001",
+      "type": "stp_port_role_change",
+      "description": "Spanning-tree port role change",
+      "category": "STP",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "deviceSerial": "Q2BB-0001-0001",
+      "deviceName": "sjc-sw1",
+      "ssidNumber": null,
+      "eventData": {
+        "port": "8",
+        "old": "designated",
+        "new": "root"
+      }
+    }
+  ]
+}

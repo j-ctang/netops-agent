@@ -1,0 +1,130 @@
+[
+  {
+    "serial": "Q2AA-0001-0001",
+    "name": "sjc-mx1",
+    "model": "MX67",
+    "productType": "appliance",
+    "networkId": "N_1001",
+    "status": "online",
+    "mac": "00:18:0a:00:00:00",
+    "publicIp": "203.0.113.0",
+    "lanIp": "10.0.0.1",
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  },
+  {
+    "serial": "Q2BB-0001-0001",
+    "name": "sjc-sw1",
+    "model": "MS120-8",
+    "productType": "switch",
+    "networkId": "N_1001",
+    "status": "online",
+    "mac": "00:18:0a:00:00:01",
+    "publicIp": "203.0.113.1",
+    "lanIp": "10.0.1.1",
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  },
+  {
+    "serial": "Q2BB-0001-0002",
+    "name": "sjc-sw2",
+    "model": "MS120-8",
+    "productType": "switch",
+    "networkId": "N_1001",
+    "status": "alerting",
+    "mac": "00:18:0a:00:00:02",
+    "publicIp": "203.0.113.2",
+    "lanIp": "10.0.2.1",
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  },
+  {
+    "serial": "Q2CC-0001-0001",
+    "name": "sjc-ap1",
+    "model": "MR36",
+    "productType": "wireless",
+    "networkId": "N_1001",
+    "status": "online",
+    "mac": "00:18:0a:00:00:03",
+    "publicIp": "203.0.113.3",
+    "lanIp": "10.0.3.1",
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  },
+  {
+    "serial": "Q2CC-0001-0002",
+    "name": "sjc-ap2",
+    "model": "MR36",
+    "productType": "wireless",
+    "networkId": "N_1001",
+    "status": "offline",
+    "mac": "00:18:0a:00:00:04",
+    "publicIp": "203.0.113.4",
+    "lanIp": null,
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  },
+  {
+    "serial": "Q2BB-0002-0001",
+    "name": "rtp-sw1",
+    "model": "MS210-24",
+    "productType": "switch",
+    "networkId": "N_1002",
+    "status": "online",
+    "mac": "00:18:0a:00:00:05",
+    "publicIp": "203.0.113.5",
+    "lanIp": "10.0.5.1",
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  },
+  {
+    "serial": "Q2CC-0002-0001",
+    "name": "rtp-ap1",
+    "model": "MR46",
+    "productType": "wireless",
+    "networkId": "N_1002",
+    "status": "online",
+    "mac": "00:18:0a:00:00:06",
+    "publicIp": "203.0.113.6",
+    "lanIp": "10.0.6.1",
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  },
+  {
+    "serial": "Q2CC-0002-0002",
+    "name": "rtp-ap2",
+    "model": "MR46",
+    "productType": "wireless",
+    "networkId": "N_1002",
+    "status": "dormant",
+    "mac": "00:18:0a:00:00:07",
+    "publicIp": "203.0.113.7",
+    "lanIp": null,
+    "lastReportedAt": "2026-11-16T10:00:00.000000Z",
+    "tags": [],
+    "components": {
+      "powerSupplies": []
+    }
+  }
+]

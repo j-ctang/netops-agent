@@ -1,0 +1,21 @@
+[
+  {
+    "id": "1000001",
+    "name": "Synthetic Org",
+    "url": "https://n1.meraki.com/o/x/manage/organization/overview",
+    "api": {
+      "enabled": true
+    },
+    "licensing": {
+      "model": "co-term"
+    },
+    "cloud": {
+      "region": {
+        "name": "North America"
+      }
+    },
+    "management": {
+      "details": []
+    }
+  }
+]

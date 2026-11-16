@@ -1,0 +1,149 @@
+[
+  {
+    "id": "kN_10021",
+    "mac": "aa:bb:cc:02:00:01",
+    "description": "client-1",
+    "ip": "10.1.0.1",
+    "user": null,
+    "firstSeen": "2026-11-15T00:00:00Z",
+    "lastSeen": "2026-11-16T09:00:00Z",
+    "manufacturer": "Apple",
+    "os": "iOS",
+    "ssid": "Corp",
+    "vlan": "10",
+    "switchport": null,
+    "status": "Online",
+    "usage": {
+      "sent": 100,
+      "recv": 200
+    },
+    "recentDeviceConnection": "Wireless",
+    "recentDeviceSerial": ""
+  },
+  {
+    "id": "kN_10022",
+    "mac": "aa:bb:cc:02:00:02",
+    "description": "client-2",
+    "ip": "10.1.0.2",
+    "user": null,
+    "firstSeen": "2026-11-15T00:00:00Z",
+    "lastSeen": "2026-11-16T09:00:00Z",
+    "manufacturer": "Apple",
+    "os": "iOS",
+    "ssid": "Corp",
+    "vlan": "10",
+    "switchport": null,
+    "status": "Online",
+    "usage": {
+      "sent": 200,
+      "recv": 400
+    },
+    "recentDeviceConnection": "Wireless",
+    "recentDeviceSerial": ""
+  },
+  {
+    "id": "kN_10023",
+    "mac": "aa:bb:cc:02:00:03",
+    "description": "client-3",
+    "ip": "10.1.0.3",
+    "user": null,
+    "firstSeen": "2026-11-15T00:00:00Z",
+    "lastSeen": "2026-11-16T09:00:00Z",
+    "manufacturer": "Apple",
+    "os": "iOS",
+    "ssid": "Lab-IoT",
+    "vlan": "10",
+    "switchport": null,
+    "status": "Online",
+    "usage": {
+      "sent": 300,
+      "recv": 600
+    },
+    "recentDeviceConnection": "Wireless",
+    "recentDeviceSerial": ""
+  },
+  {
+    "id": "kN_10024",
+    "mac": "aa:bb:cc:02:00:04",
+    "description": "client-4",
+    "ip": "10.1.0.4",
+    "user": null,
+    "firstSeen": "2026-11-15T00:00:00Z",
+    "lastSeen": "2026-11-16T09:00:00Z",
+    "manufacturer": "Apple",
+    "os": "iOS",
+    "ssid": "Lab-IoT",
+    "vlan": "10",
+    "switchport": null,
+    "status": "Online",
+    "usage": {
+      "sent": 400,
+      "recv": 800
+    },
+    "recentDeviceConnection": "Wireless",
+    "recentDeviceSerial": ""
+  },
+  {
+    "id": "kN_10025",
+    "mac": "aa:bb:cc:02:00:05",
+    "description": "client-5",
+    "ip": "10.1.0.5",
+    "user": null,
+    "firstSeen": "2026-11-15T00:00:00Z",
+    "lastSeen": "2026-11-16T09:00:00Z",
+    "manufacturer": "Apple",
+    "os": "iOS",
+    "ssid": "Lab-IoT",
+    "vlan": "10",
+    "switchport": null,
+    "status": "Online",
+    "usage": {
+      "sent": 500,
+      "recv": 1000
+    },
+    "recentDeviceConnection": "Wireless",
+    "recentDeviceSerial": ""
+  },
+  {
+    "id": "kN_10026",
+    "mac": "aa:bb:cc:02:00:06",
+    "description": "client-6",
+    "ip": "10.1.0.6",
+    "user": null,
+    "firstSeen": "2026-11-15T00:00:00Z",
+    "lastSeen": "2026-11-16T09:00:00Z",
+    "manufacturer": "Apple",
+    "os": "iOS",
+    "ssid": "Lab-IoT",
+    "vlan": "10",
+    "switchport": null,
+    "status": "Online",
+    "usage": {
+      "sent": 600,
+      "recv": 1200
+    },
+    "recentDeviceConnection": "Wireless",
+    "recentDeviceSerial": ""
+  },
+  {
+    "id": "kN_10027",
+    "mac": "aa:bb:cc:02:00:07",
+    "description": "client-7",
+    "ip": "10.1.0.7",
+    "user": null,
+    "firstSeen": "2026-11-15T00:00:00Z",
+    "lastSeen": "2026-11-16T09:00:00Z",
+    "manufacturer": "Apple",
+    "os": "iOS",
+    "ssid": "Lab-IoT",
+    "vlan": "10",
+    "switchport": null,
+    "status": "Online",
+    "usage": {
+      "sent": 700,
+      "recv": 1400
+    },
+    "recentDeviceConnection": "Wireless",
+    "recentDeviceSerial": ""
+  }
+]
