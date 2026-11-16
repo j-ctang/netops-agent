@@ -1,0 +1,32 @@
+[project]
+name = "netops-agent"
+version = "0.1.0"
+description = "Network-ops agent over the Cisco Meraki Dashboard API, with MCP tool server"
+authors = [
+    { name = "j-ctang", email = "272994374+j-ctang@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=2.3.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.29,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[project.scripts]
+netops-agent = "netops_agent.agent:main"
+netops-mcp = "netops_agent.server:main"
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
