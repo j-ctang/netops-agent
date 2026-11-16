@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.1.0",
+  "name": "netops-agent",
+  "version": "0.1.0",
+  "description": "Answers network operations questions (device status, switch ports, clients per SSID, event logs) by calling the Cisco Meraki Dashboard API through an MCP tool server.",
+  "authors": [
+    "j-ctang"
+  ],
+  "created_at": "2026-11-16T00:00:00Z",
+  "skills": [
+    {
+      "name": "tool_use_automation/tool_use_planning",
+      "id": 1701
+    },
+    {
+      "name": "ai_ml_engineering/retrieval_augmented_generation/document_or_database_question_answering",
+      "id": 70604
+    }
+  ],
+  "domains": [
+    {
+      "name": "telecommunications/network_infrastructure",
+      "id": 1603
+    },
+    {
+      "name": "telecommunications/telecom_operations",
+      "id": 1604
+    }
+  ],
+  "locators": [
+    {
+      "type": "source_code",
+      "urls": [
+        "https://github.com/j-ctang/netops-agent"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "name": "integration/mcp",
+      "id": 202,
+      "data": {
+        "name": "netops-meraki",
+        "connections": [
+          {
+            "type": "stdio",
+            "command": "uv",
+            "args": [
+              "run",
+              "netops-mcp"
+            ],
+            "env_vars": [
+              {
+                "name": "MERAKI_API_KEY",
+                "description": "Meraki Dashboard API key",
+                "required": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
