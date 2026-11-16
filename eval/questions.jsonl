@@ -1,0 +1,30 @@
+{"id": "q01", "question": "How many organizations can this API key access?", "kind": "org_count", "params": {}}
+{"id": "q02", "question": "What are the names of the organizations this API key can access?", "kind": "org_names", "params": {}}
+{"id": "q03", "question": "How many networks are there in total across all organizations?", "kind": "network_count", "params": {}}
+{"id": "q04", "question": "List the names of all networks.", "kind": "network_names", "params": {}}
+{"id": "q05", "question": "Which networks include wireless?", "kind": "networks_with_product", "params": {"product_type": "wireless"}}
+{"id": "q06", "question": "Which networks include an appliance (MX)?", "kind": "networks_with_product", "params": {"product_type": "appliance"}}
+{"id": "q07", "question": "How many devices are there in total across all organizations?", "kind": "device_count", "params": {}}
+{"id": "q08", "question": "How many switches are there in total?", "kind": "device_count", "params": {"product_type": "switch"}}
+{"id": "q09", "question": "How many wireless access points are there in total?", "kind": "device_count", "params": {"product_type": "wireless"}}
+{"id": "q10", "question": "How many security appliances are there in total?", "kind": "device_count", "params": {"product_type": "appliance"}}
+{"id": "q11", "question": "Which devices are offline? Give their names.", "kind": "devices_with_status", "params": {"status": "offline"}}
+{"id": "q12", "question": "Which devices are alerting? Give their names.", "kind": "devices_with_status", "params": {"status": "alerting"}}
+{"id": "q13", "question": "Which devices are dormant? Give their names.", "kind": "devices_with_status", "params": {"status": "dormant"}}
+{"id": "q14", "question": "How many devices are online?", "kind": "status_count", "params": {"status": "online"}}
+{"id": "q15", "question": "How many devices are not online (offline, alerting, or dormant)?", "kind": "not_online_count", "params": {}}
+{"id": "q16", "question": "Which device model appears most often?", "kind": "top_model", "params": {}}
+{"id": "q17", "question": "Which network has the most devices?", "kind": "network_most_devices", "params": {}}
+{"id": "q18", "question": "How many switch ports are connected across all switches?", "kind": "port_count", "params": {"status": "Connected"}}
+{"id": "q19", "question": "How many switch ports are disabled across all switches?", "kind": "port_count", "params": {"status": "Disabled"}}
+{"id": "q20", "question": "How many switch ports are enabled but disconnected across all switches?", "kind": "port_count", "params": {"status": "Disconnected"}}
+{"id": "q21", "question": "Which switches have at least one port reporting errors? Give their names.", "kind": "switches_with_port_errors", "params": {}}
+{"id": "q22", "question": "How many connected switch ports are running below 1 Gbps?", "kind": "slow_ports", "params": {}}
+{"id": "q23", "question": "Which switch has the most connected ports?", "kind": "switch_most_connected", "params": {}}
+{"id": "q24", "question": "How many switch ports are drawing PoE power?", "kind": "poe_ports", "params": {}}
+{"id": "q25", "question": "Which SSID has the most clients across all networks in the last day?", "kind": "top_ssid", "params": {}}
+{"id": "q26", "question": "How many wireless clients were seen in the last day across all networks?", "kind": "wireless_client_count", "params": {}}
+{"id": "q27", "question": "How many distinct SSIDs had clients in the last day?", "kind": "ssid_count", "params": {}}
+{"id": "q28", "question": "How many switch port status change events (port_status) are in the switch event logs?", "kind": "event_count", "params": {"product_type": "switch", "event_type": "port_status"}}
+{"id": "q29", "question": "Which switch logged the most port_status events?", "kind": "top_event_device", "params": {"product_type": "switch", "event_type": "port_status"}}
+{"id": "q30", "question": "How many wireless events are in the event logs across all networks?", "kind": "event_count", "params": {"product_type": "wireless"}}

@@ -1,0 +1,157 @@
+{
+  "source": "fixtures:tests/fixtures",
+  "generated_at": "2026-11-16T20:26:15+00:00",
+  "api_calls": 14,
+  "truth": {
+    "q01": {
+      "type": "number",
+      "value": 1
+    },
+    "q02": {
+      "type": "set",
+      "value": [
+        "Synthetic Org"
+      ]
+    },
+    "q03": {
+      "type": "number",
+      "value": 2
+    },
+    "q04": {
+      "type": "set",
+      "value": [
+        "Branch-RTP",
+        "Branch-SJC"
+      ]
+    },
+    "q05": {
+      "type": "set",
+      "value": [
+        "Branch-RTP",
+        "Branch-SJC"
+      ]
+    },
+    "q06": {
+      "type": "set",
+      "value": [
+        "Branch-SJC"
+      ]
+    },
+    "q07": {
+      "type": "number",
+      "value": 8
+    },
+    "q08": {
+      "type": "number",
+      "value": 3
+    },
+    "q09": {
+      "type": "number",
+      "value": 4
+    },
+    "q10": {
+      "type": "number",
+      "value": 1
+    },
+    "q11": {
+      "type": "set",
+      "value": [
+        "sjc-ap2"
+      ]
+    },
+    "q12": {
+      "type": "set",
+      "value": [
+        "sjc-sw2"
+      ]
+    },
+    "q13": {
+      "type": "set",
+      "value": [
+        "rtp-ap2"
+      ]
+    },
+    "q14": {
+      "type": "number",
+      "value": 5
+    },
+    "q15": {
+      "type": "number",
+      "value": 3
+    },
+    "q16": {
+      "type": "any_of",
+      "value": [
+        "MR36",
+        "MR46",
+        "MS120-8"
+      ]
+    },
+    "q17": {
+      "type": "any_of",
+      "value": [
+        "Branch-SJC"
+      ]
+    },
+    "q18": {
+      "type": "number",
+      "value": 25
+    },
+    "q19": {
+      "type": "number",
+      "value": 2
+    },
+    "q20": {
+      "type": "number",
+      "value": 13
+    },
+    "q21": {
+      "type": "set",
+      "value": [
+        "sjc-sw2"
+      ]
+    },
+    "q22": {
+      "type": "number",
+      "value": 3
+    },
+    "q23": {
+      "type": "any_of",
+      "value": [
+        "rtp-sw1"
+      ]
+    },
+    "q24": {
+      "type": "number",
+      "value": 7
+    },
+    "q25": {
+      "type": "any_of",
+      "value": [
+        "Corp"
+      ]
+    },
+    "q26": {
+      "type": "number",
+      "value": 18
+    },
+    "q27": {
+      "type": "number",
+      "value": 3
+    },
+    "q28": {
+      "type": "number",
+      "value": 4
+    },
+    "q29": {
+      "type": "any_of",
+      "value": [
+        "sjc-sw2"
+      ]
+    },
+    "q30": {
+      "type": "number",
+      "value": 3
+    }
+  }
+}
