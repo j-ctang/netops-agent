@@ -84,3 +84,17 @@ def test_missing_llm_key_is_clear(monkeypatch):
     monkeypatch.delenv("LLM_API_KEY", raising=False)
     with pytest.raises(RuntimeError, match="LLM_API_KEY"):
         OpenAICompatibleChat()
+
+
+def test_chat_retries_429_with_backoff():
+    codes = iter([429, 429, 200])
+
+    def handler(request):
+        code = next(codes)
+        body = {"choices": [{"message": {"content": "ok"}}]} if code == 200 else {"error": {"code": 429}}
+        return httpx.Response(code, json=body)
+
+    waits = []
+    chat = OpenAICompatibleChat(api_key="sk", transport=httpx.MockTransport(handler), sleep=waits.append)
+    assert chat.complete([{"role": "user", "content": "q"}], [])["content"] == "ok"
+    assert waits == [5, 10]

@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
@@ -38,7 +40,11 @@ class OpenAICompatibleChat:
         api_key: str | None = None,
         model: str | None = None,
         transport: httpx.BaseTransport | None = None,
+        max_retries: int = 4,
+        sleep: Callable[[float], None] = time.sleep,
     ) -> None:
+        self.max_retries = max_retries
+        self.sleep = sleep
         self.model = model or os.environ.get("LLM_MODEL") or DEFAULT_LLM_MODEL
         key = api_key if api_key is not None else os.environ.get("LLM_API_KEY", "")
         if not key:
@@ -51,10 +57,12 @@ class OpenAICompatibleChat:
         )
 
     def complete(self, messages: list[dict[str, Any]], tools: list[dict[str, Any]]) -> dict[str, Any]:
-        resp = self._http.post(
-            "/chat/completions",
-            json={"model": self.model, "messages": messages, "tools": tools, "temperature": 0},
-        )
+        payload = {"model": self.model, "messages": messages, "tools": tools, "temperature": 0}
+        for attempt in range(self.max_retries + 1):
+            resp = self._http.post("/chat/completions", json=payload)
+            if resp.status_code != 429 or attempt == self.max_retries:
+                break
+            self.sleep(float(resp.headers.get("Retry-After", 5 * 2**attempt)))
         resp.raise_for_status()
         body = resp.json()
         if "choices" not in body:
