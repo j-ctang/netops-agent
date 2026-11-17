@@ -26,9 +26,15 @@ def test_score_kinds():
 
 def test_truth_from_fixtures(client):
     s = Snapshot.fetch(client)
-    assert truth("device_count", {"product_type": "switch"}, s) == {"type": "number", "value": 3}
-    assert truth("top_ssid", {}, s) == {"type": "any_of", "value": ["Corp"]}
-    assert truth("port_count", {"status": "Connected"}, s)["value"] == 25
+    assert truth("device_count", {"product_type": "switch"}, s) == {"type": "number", "value": 1}
+    assert truth("top_ssid", {}, s) == {"type": "set", "value": []}
+    assert truth("port_count", {"status": "Disconnected"}, s)["value"] == 30
+    assert truth("devices_with_status", {"status": "dormant"}, s)["value"] == [
+        "QBSA-BT9H-9GNH",
+        "QBSB-DU4U-25UB",
+        "QBSC-C83J-XEMY",
+        "QBSD-CF57-HTY7",
+    ]
 
 
 def test_every_question_has_truth(client):

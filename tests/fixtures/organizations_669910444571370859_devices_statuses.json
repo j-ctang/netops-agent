@@ -1,0 +1,64 @@
+[
+  {
+    "name": "",
+    "serial": "QBSA-BT9H-9GNH",
+    "mac": "4c:c8:a1:02:00:04",
+    "publicIp": null,
+    "networkId": "L_669910444571385303",
+    "status": "dormant",
+    "lastReportedAt": null,
+    "productType": "appliance",
+    "components": {
+      "powerSupplies": []
+    },
+    "model": "MX100",
+    "tags": [],
+    "usingCellularFailover": false,
+    "wan1Ip": null,
+    "wan2Ip": null
+  },
+  {
+    "name": "",
+    "serial": "QBSB-DU4U-25UB",
+    "mac": "4c:c8:a1:06:00:06",
+    "publicIp": null,
+    "networkId": "L_669910444571385303",
+    "status": "dormant",
+    "lastReportedAt": null,
+    "productType": "switch",
+    "components": {
+      "powerSupplies": []
+    },
+    "model": "MS250-24",
+    "tags": [],
+    "lanIp": null
+  },
+  {
+    "name": "",
+    "serial": "QBSC-C83J-XEMY",
+    "mac": "4c:c8:a1:0c:01:9e",
+    "publicIp": null,
+    "networkId": "L_669910444571385303",
+    "status": "dormant",
+    "lastReportedAt": null,
+    "productType": "wireless",
+    "model": "MR52",
+    "tags": [
+      "recently-added"
+    ],
+    "lanIp": null
+  },
+  {
+    "name": "",
+    "serial": "QBSD-CF57-HTY7",
+    "mac": "4c:c8:a1:0f:01:2b",
+    "publicIp": null,
+    "networkId": "L_669910444571385303",
+    "status": "dormant",
+    "lastReportedAt": null,
+    "productType": "camera",
+    "model": "MV12W",
+    "tags": [],
+    "lanIp": null
+  }
+]

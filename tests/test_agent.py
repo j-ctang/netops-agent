@@ -27,17 +27,19 @@ def test_agent_runs_tools_then_answers(client):
         [
             {
                 "content": None,
-                "tool_calls": [tool_call(1, "get_device_statuses", {"org_id": "1000001", "status": "offline"})],
+                "tool_calls": [
+                    tool_call(1, "get_device_statuses", {"org_id": "669910444571370859", "status": "dormant"})
+                ],
             },
-            {"content": "sjc-ap2 is offline."},
+            {"content": "QBSB-DU4U-25UB is dormant."},
         ]
     )
-    r = Agent(llm, client).ask("Which devices are offline?")
-    assert r.answer == "sjc-ap2 is offline."
+    r = Agent(llm, client).ask("Which devices are dormant?")
+    assert r.answer == "QBSB-DU4U-25UB is dormant."
     assert r.api_calls == 1
     assert r.tool_calls[0]["name"] == "get_device_statuses"
     tool_msg = llm.seen[1][0][-1]
-    assert tool_msg["role"] == "tool" and "sjc-ap2" in tool_msg["content"]
+    assert tool_msg["role"] == "tool" and "QBSB-DU4U-25UB" in tool_msg["content"]
     assert {t["function"]["name"] for t in llm.seen[0][1]} >= {"list_organizations", "get_network_events"}
 
 

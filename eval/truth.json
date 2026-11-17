@@ -1,7 +1,7 @@
 {
-  "source": "fixtures:tests/fixtures",
-  "generated_at": "2026-11-16T20:26:15+00:00",
-  "api_calls": 14,
+  "source": "https://n190.dashboard.meraki.com/api/v1",
+  "generated_at": "2026-11-17T00:22:30+00:00",
+  "api_calls": 9,
   "truth": {
     "q01": {
       "type": "number",
@@ -10,44 +10,42 @@
     "q02": {
       "type": "set",
       "value": [
-        "Synthetic Org"
+        "DevNet-47LAwcsYS1sK"
       ]
     },
     "q03": {
       "type": "number",
-      "value": 2
+      "value": 1
     },
     "q04": {
       "type": "set",
       "value": [
-        "Branch-RTP",
-        "Branch-SJC"
+        "branch_office"
       ]
     },
     "q05": {
       "type": "set",
       "value": [
-        "Branch-RTP",
-        "Branch-SJC"
+        "branch_office"
       ]
     },
     "q06": {
       "type": "set",
       "value": [
-        "Branch-SJC"
+        "branch_office"
       ]
     },
     "q07": {
       "type": "number",
-      "value": 8
+      "value": 4
     },
     "q08": {
       "type": "number",
-      "value": 3
+      "value": 1
     },
     "q09": {
       "type": "number",
-      "value": 4
+      "value": 1
     },
     "q10": {
       "type": "number",
@@ -55,103 +53,99 @@
     },
     "q11": {
       "type": "set",
-      "value": [
-        "sjc-ap2"
-      ]
+      "value": []
     },
     "q12": {
       "type": "set",
-      "value": [
-        "sjc-sw2"
-      ]
+      "value": []
     },
     "q13": {
       "type": "set",
       "value": [
-        "rtp-ap2"
+        "QBSA-BT9H-9GNH",
+        "QBSB-DU4U-25UB",
+        "QBSC-C83J-XEMY",
+        "QBSD-CF57-HTY7"
       ]
     },
     "q14": {
       "type": "number",
-      "value": 5
+      "value": 0
     },
     "q15": {
       "type": "number",
-      "value": 3
+      "value": 4
     },
     "q16": {
       "type": "any_of",
       "value": [
-        "MR36",
-        "MR46",
-        "MS120-8"
+        "MR52",
+        "MS250-24",
+        "MV12W",
+        "MX100"
       ]
     },
     "q17": {
       "type": "any_of",
       "value": [
-        "Branch-SJC"
+        "branch_office"
       ]
     },
     "q18": {
       "type": "number",
-      "value": 25
+      "value": 0
     },
     "q19": {
       "type": "number",
-      "value": 2
+      "value": 0
     },
     "q20": {
       "type": "number",
-      "value": 13
+      "value": 30
     },
     "q21": {
       "type": "set",
       "value": [
-        "sjc-sw2"
+        "QBSB-DU4U-25UB"
       ]
     },
     "q22": {
       "type": "number",
-      "value": 3
+      "value": 0
     },
     "q23": {
       "type": "any_of",
       "value": [
-        "rtp-sw1"
+        "QBSB-DU4U-25UB"
       ]
     },
     "q24": {
       "type": "number",
-      "value": 7
+      "value": 0
     },
     "q25": {
-      "type": "any_of",
-      "value": [
-        "Corp"
-      ]
+      "type": "set",
+      "value": []
     },
     "q26": {
       "type": "number",
-      "value": 18
+      "value": 0
     },
     "q27": {
       "type": "number",
-      "value": 3
+      "value": 0
     },
     "q28": {
       "type": "number",
-      "value": 4
+      "value": 0
     },
     "q29": {
-      "type": "any_of",
-      "value": [
-        "sjc-sw2"
-      ]
+      "type": "set",
+      "value": []
     },
     "q30": {
       "type": "number",
-      "value": 3
+      "value": 0
     }
   }
 }

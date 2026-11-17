@@ -1,10 +1,8 @@
-These fixtures are synthetic. They follow the response shapes in the Meraki
-Dashboard API v1 reference, but every ID, name, and value is made up.
-
-They were written by hand because the published DevNet always-on sandbox keys
-returned 401 on 2026-11-16 (see LOG.md). Replace them with real responses by
-running `uv run python -m netops_agent.record tests/fixtures` once a working
-MERAKI_API_KEY is available.
+These fixtures are real responses from a reserved Cisco DevNet Meraki sandbox,
+recorded 2026-11-16 with `uv run python -m netops_agent.record tests/fixtures`.
+Checked and scrubbed for secrets: no API keys, tokens, passwords, or PSKs are
+present. The sandbox org is temporary; IDs and dashboard URLs no longer resolve
+after the reservation ends.
 
 File name = request path with "/" replaced by "_", plus "_<productType>" for
 event queries.

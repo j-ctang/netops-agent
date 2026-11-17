@@ -1,8 +1,10 @@
 [
   {
-    "id": "1000001",
-    "name": "Synthetic Org",
-    "url": "https://n1.meraki.com/o/x/manage/organization/overview",
+    "id": "669910444571370859",
+    "name": "DevNet-47LAwcsYS1sK",
+    "url": "https://n190.dashboard.meraki.com/o/GAhDTb-c/manage/organization/overview",
+    "samlConsumerUrls": null,
+    "samlConsumerUrl": null,
     "api": {
       "enabled": true
     },
@@ -11,7 +13,10 @@
     },
     "cloud": {
       "region": {
-        "name": "North America"
+        "name": "North America",
+        "host": {
+          "name": "United States"
+        }
       }
     },
     "management": {

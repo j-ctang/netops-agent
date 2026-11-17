@@ -13,5 +13,5 @@ def test_server_lists_all_tools_without_client_param(client):
 
 
 def test_server_calls_tool(client):
-    result = asyncio.run(build_server(client).call_tool("get_client_counts_per_ssid", {"network_id": "N_1002"}))
-    assert result.structured_content == {"Corp": 2, "Lab-IoT": 5}
+    result = asyncio.run(build_server(client).call_tool("list_organizations", {}))
+    assert result.structured_content == {"result": [{"id": "669910444571370859", "name": "DevNet-47LAwcsYS1sK"}]}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "L_669910444571385303",
+    "organizationId": "669910444571370859",
+    "name": "branch_office",
+    "productTypes": [
+      "appliance",
+      "camera",
+      "switch",
+      "wireless"
+    ],
+    "timeZone": "America/Los_Angeles",
+    "tags": [],
+    "enrollmentString": null,
+    "url": "https://n190.dashboard.meraki.com/branch_office-ap/n/EVudvd-c/manage/clients",
+    "notes": null,
+    "details": [
+      {
+        "productType": "appliance",
+        "name": "operating system",
+        "value": "Meraki"
+      }
+    ],
+    "isBoundToConfigTemplate": false,
+    "isVirtual": false
+  }
+]
