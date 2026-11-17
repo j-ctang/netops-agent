@@ -29,7 +29,7 @@ set -a; source .env; set +a
 | Variable | Default | Purpose |
 |---|---|---|
 | `MERAKI_API_KEY` | none | Meraki Dashboard API key |
-| `MERAKI_BASE_URL` | `https://api.meraki.com/api/v1` | API base URL |
+| `MERAKI_BASE_URL` | `https://api.meraki.com/api/v1` | API base URL; a brand-new key may briefly need its org's shard host (e.g. `https://n190.dashboard.meraki.com/api/v1`) |
 | `LLM_BASE_URL` | `https://openrouter.ai/api/v1` | OpenAI-compatible endpoint |
 | `LLM_API_KEY` | none | LLM key (needed only for the agent and `eval/run.py`) |
 | `LLM_MODEL` | `google/gemma-4-31b-it:free` | Model with tool calling |
@@ -45,4 +45,4 @@ uv run python eval/run.py                             # score the agent, writes 
 uv run pytest                                         # offline tests
 ```
 
-`eval/truth.json` currently comes from the synthetic fixtures, not the live sandbox (see LOG.md, Issues).
+`eval/truth.json` and `tests/fixtures` come from a live DevNet Meraki sandbox recorded 2026-11-16. That sandbox is small and idle, so many answers are 0 or none (see LOG.md).
