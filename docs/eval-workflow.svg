@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+<title id="title">NetOps agent evaluation workflow</title>
+<desc id="desc">Recorded Meraki responses and a 30-question dataset feed an agent run and ground-truth scoring. The map lists authentication, rate limits, reservation expiry, and dataset limitations.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#526578"/></marker></defs>
+<rect width="1200" height="860" rx="16" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172b42">
+<text x="24" y="55" font-size="34" font-weight="700">NetOps agent evaluation</text>
+<text x="24" y="102" font-size="24" font-weight="700">Data, tools and scoring</text>
+<text x="635" y="102" font-size="24" font-weight="700">Issues and how the run continued</text>
+<rect x="24" y="120" width="575" height="124" rx="12" fill="#e7f5ff" stroke="#9eafbf"/>
+<text x="42" y="156" font-size="23" font-weight="700">Record the Meraki sandbox</text>
+<text x="42" y="186" font-size="18">Reserved DevNet organization · 9 API calls</text>
+<text x="42" y="208.5" font-size="18">1 network · 4 dormant devices · 30 disconnected ports</text>
+<text x="42" y="231" font-size="18">No recent clients or events</text>
+<path d="M312 246v21" stroke="#526578" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="24" y="270" width="575" height="124" rx="12" fill="#e6fcf5" stroke="#9eafbf"/>
+<text x="42" y="306" font-size="23" font-weight="700">Prepare the evaluation inputs</text>
+<text x="42" y="336" font-size="18">tests/fixtures stores recorded API responses</text>
+<text x="42" y="358.5" font-size="18">eval/questions.jsonl defines 30 prompts and their kinds</text>
+<text x="42" y="381" font-size="18">eval/build_truth.py computes eval/truth.json from live data</text>
+<path d="M312 396v21" stroke="#526578" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="24" y="420" width="575" height="124" rx="12" fill="#f3f0ff" stroke="#9eafbf"/>
+<text x="42" y="456" font-size="23" font-weight="700">Run the tool-calling agent</text>
+<text x="42" y="486" font-size="18">OpenRouter model → Python agent → seven Meraki tools</text>
+<text x="42" y="508.5" font-size="18">Tools query live Meraki or replay recorded responses</text>
+<text x="42" y="531" font-size="18">MCP exposes the same tools · OASF describes the agent</text>
+<path d="M312 546v21" stroke="#526578" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="24" y="570" width="575" height="124" rx="12" fill="#ebfbee" stroke="#9eafbf"/>
+<text x="42" y="606" font-size="23" font-weight="700">Score answers against ground truth</text>
+<text x="42" y="636" font-size="18">eval/run.py checks numbers, sets, empty results and ties</text>
+<text x="42" y="658.5" font-size="18">Q01–Q17 live · Q18–Q30 fixture replay</text>
+<text x="42" y="681" font-size="18">Merge both runs into results/ → 30/30 · 2.47 calls/question</text>
+<rect x="635" y="120" width="541" height="124" rx="12" fill="#fff4e6" stroke="#9eafbf"/>
+<text x="653" y="156" font-size="23" font-weight="700">Sandbox authentication</text>
+<text x="653" y="188" font-size="18">Published keys returned 401 → reserve a sandbox.</text>
+<text x="653" y="210.5" font-size="18">New key first worked on the organization shard.</text>
+<rect x="635" y="270" width="541" height="124" rx="12" fill="#fff4e6" stroke="#9eafbf"/>
+<text x="653" y="306" font-size="23" font-weight="700">Model rate limits</text>
+<text x="653" y="338" font-size="18">Gemma upstream 429 → add backoff, switch to Nemotron.</text>
+<text x="653" y="360.5" font-size="18">OpenRouter quota stopped the live run after Q17.</text>
+<rect x="635" y="420" width="541" height="124" rx="12" fill="#fff4e6" stroke="#9eafbf"/>
+<text x="653" y="456" font-size="23" font-weight="700">Reservation expired</text>
+<text x="653" y="488" font-size="18">Key returned 401 → replay Q18–Q30 from fixtures.</text>
+<text x="653" y="510.5" font-size="18">The same sandbox supplied the ground truth.</text>
+<rect x="635" y="570" width="541" height="124" rx="12" fill="#fff4e6" stroke="#9eafbf"/>
+<text x="653" y="606" font-size="23" font-weight="700">Limited data and setup fixes</text>
+<text x="653" y="638" font-size="18">Idle data made many answers zero or empty.</text>
+<text x="653" y="660.5" font-size="18">Adjusted MCP 2.x imports, OASF schema and final 429 error.</text>
+<rect x="24" y="720" width="1152" height="116" rx="12" fill="#f1f3f5" stroke="#9eafbf"/>
+<text x="42" y="756" font-size="23" font-weight="700">Question set · eval/questions.jsonl</text>
+<text x="42" y="785" font-size="19">Q01–Q06 Organizations and networks  ·  Q07–Q17 Device inventory and status  ·  Q18–Q24 Switch ports and PoE</text>
+<text x="42" y="808.75" font-size="19">Q25–Q27 Wireless clients and SSIDs  ·  Q28–Q30 Switch and wireless events</text>
+</g>
+</svg>
