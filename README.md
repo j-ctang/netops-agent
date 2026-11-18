@@ -46,3 +46,11 @@ uv run pytest                                         # offline tests
 ```
 
 `eval/truth.json` and `tests/fixtures` come from a live DevNet Meraki sandbox recorded 2026-11-16. That sandbox is small and idle, so many answers are 0 or none (see LOG.md).
+
+## Evaluation workflow
+
+![Workflow map showing the Meraki data source, evaluation inputs, scoring, and issues encountered](docs/eval-workflow.svg)
+
+Open the [editable Excalidraw scene](docs/eval-workflow.excalidraw) in Excalidraw. The [30 questions](eval/questions.jsonl) cover organizations and networks, device inventory and status, switch ports and PoE, wireless clients and SSIDs, and event logs.
+
+The [recorded API responses](tests/fixtures) support offline tests and replay. The [ground-truth builder](eval/build_truth.py) computes the [expected answers](eval/truth.json) from raw Meraki responses, and the [evaluation runner](eval/run.py) scores the agent and writes the [results](results/). The [build log](LOG.md#issues) details the authentication failures, rate limits, sandbox expiry, and limits of the idle dataset.
