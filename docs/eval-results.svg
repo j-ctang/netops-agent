@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="239" viewBox="0 0 760 239" role="img" aria-labelledby="title desc">
+<title id="title">Mean Meraki API calls per question</title>
+<desc id="desc">Live 1.94, replay 3.15, combined 2.47. All questions scored correct.</desc>
+<rect width="760" height="239" rx="12" fill="#f6f8fa"/>
+<g font-family="system-ui,sans-serif" fill="#172b42">
+<text x="24" y="36" font-size="21" font-weight="700">Mean Meraki API calls per question</text>
+<path d="M202 62V198" stroke="#d2dae3"/>
+<text x="202" y="220" font-size="14" text-anchor="middle">0</text>
+<path d="M326 62V198" stroke="#d2dae3"/>
+<text x="326" y="220" font-size="14" text-anchor="middle">1</text>
+<path d="M450 62V198" stroke="#d2dae3"/>
+<text x="450" y="220" font-size="14" text-anchor="middle">2</text>
+<path d="M574 62V198" stroke="#d2dae3"/>
+<text x="574" y="220" font-size="14" text-anchor="middle">3</text>
+<path d="M698 62V198" stroke="#d2dae3"/>
+<text x="698" y="220" font-size="14" text-anchor="middle">4</text>
+<text x="24" y="89" font-size="16">Live · Q01–Q17</text>
+<rect x="202" y="70" width="240.7" height="26" rx="4" fill="#165b9f"/>
+<text x="454.7" y="89" font-size="16" font-weight="700">1.94</text>
+<text x="24" y="133" font-size="16">Replay · Q18–Q30</text>
+<rect x="202" y="114" width="391.1" height="26" rx="4" fill="#19745b"/>
+<text x="605.1" y="133" font-size="16" font-weight="700">3.15</text>
+<text x="24" y="177" font-size="16">Combined</text>
+<rect x="202" y="158" width="305.9" height="26" rx="4" fill="#49568f"/>
+<text x="519.9" y="177" font-size="16" font-weight="700">2.47</text>
+</g>
+</svg>
