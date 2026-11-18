@@ -1,6 +1,6 @@
 """Run the agent on every eval question and score it against eval/truth.json.
 
-uv run python eval/run.py [--fixtures tests/fixtures] [--limit N]
+uv run python eval/run.py [--fixtures tests/fixtures] [--limit N] [--start N] [--out FILE]
 Writes results/<date>_<model>.json.
 """
 
@@ -20,12 +20,12 @@ HERE = Path(__file__).parent
 RESULTS = HERE.parent / "results"
 
 
-def run(llm: ChatModel, client: MerakiClient, truth_file: Path, model: str, limit: int | None = None) -> dict:
+def run(llm: ChatModel, client: MerakiClient, truth_file: Path, model: str, limit: int | None = None, start: int = 0) -> dict:
     questions = [json.loads(line) for line in (HERE / "questions.jsonl").read_text().splitlines() if line.strip()]
     truth = json.loads(truth_file.read_text())
     agent = Agent(llm, client)
     rows = []
-    for q in questions[:limit]:
+    for q in questions[start:limit]:
         expected = truth["truth"][q["id"]]
         try:
             r = agent.ask(q["question"])
@@ -61,14 +61,16 @@ def main() -> None:
     ap.add_argument("--fixtures")
     ap.add_argument("--truth", default=str(HERE / "truth.json"))
     ap.add_argument("--limit", type=int)
+    ap.add_argument("--start", type=int, default=0, help="skip the first N questions")
+    ap.add_argument("--out", help="output path (default results/<date>_<model>.json)")
     args = ap.parse_args()
     client = (
         MerakiClient(api_key="offline", transport=FixtureTransport(args.fixtures)) if args.fixtures else MerakiClient()
     )
     llm = OpenAICompatibleChat()
-    out = run(llm, client, Path(args.truth), llm.model, args.limit)
+    out = run(llm, client, Path(args.truth), llm.model, args.limit, args.start)
     RESULTS.mkdir(exist_ok=True)
-    path = RESULTS / f"{datetime.now(UTC):%Y-%m-%d}_{re.sub(r'[^A-Za-z0-9.-]+', '-', llm.model)}.json"
+    path = Path(args.out) if args.out else RESULTS / f"{datetime.now(UTC):%Y-%m-%d}_{re.sub(r'[^A-Za-z0-9.-]+', '-', llm.model)}.json"
     path.write_text(json.dumps(out, indent=2) + "\n")
     print(f"{out['correct']}/{out['total']} correct, {out['mean_api_calls']} API calls per answer -> {path}")
 
