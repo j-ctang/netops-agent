@@ -4,7 +4,21 @@ A Python agent that answers network operations questions ("which switch ports fl
 
 Evaluated on 30 questions whose ground truth is computed by code from raw API responses.
 
-Status: in progress. See [LOG.md](LOG.md) for each step, measurements, and issues.
+## Evaluation results
+
+Nemotron 3 Ultra scored **30/30** across a live run and a replay of real responses recorded from the same Meraki DevNet sandbox.
+
+| Run | Correct | Mean Meraki API calls per question |
+|---|---:|---:|
+| Live · Q01–Q17 | 17/17 | 1.94 |
+| Replay · Q18–Q30 | 13/13 | 3.15 |
+| Combined | 30/30 | 2.47 |
+
+![Bar chart of mean Meraki API calls per question by run](docs/eval-results.svg)
+
+The live run stopped at question 17 when the OpenRouter free quota ran out. The sandbox expired before the remaining questions could run live, so questions 18–30 used recorded responses. The two segments cover different questions. The sandbox had no recent clients or events and no connected switch ports, so many expected answers were zero or empty.
+
+See the [raw results](results/2026-11-18_nvidia-nemotron-3-ultra-550b-a55b-free_full.json) and [build log](LOG.md#metrics).
 
 ## Layout
 
