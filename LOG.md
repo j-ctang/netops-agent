@@ -8,6 +8,7 @@ Dated record of steps, measurements, and issues. Raw eval output lives in `resul
 |---|---|---|---|---|
 | 2026-11-16 | google/gemma-4-31b-it:free | 0 / 30 | n/a | every request 429 (upstream rate limit); no answers |
 | 2026-11-16 | nvidia/nemotron-3-ultra-550b-a55b:free | 17 / 30 (17 / 17 answered) | 1.94 per answered question (1.1 over all 30) | q18-q30 not run: OpenRouter free daily quota (50 requests) used up |
+| 2026-11-18 | nvidia/nemotron-3-ultra-550b-a55b:free | **30 / 30** | 2.47 per question (q01-q17 1.94, q18-q30 3.15) | q18-q30 replayed from `tests/fixtures` (same sandbox); `results/2026-11-18_nvidia-nemotron-3-ultra-550b-a55b-free_full.json` |
 
 ## Steps
 
@@ -62,6 +63,12 @@ Dated record of steps, measurements, and issues. Raw eval output lives in `resul
 - Switched to `nvidia/nemotron-3-ultra-550b-a55b:free` (free, lists `tools`). q01-q17 answered, all correct. From q18 on every request returned 429: the key's free-model daily quota (50 requests/day) was used up (55 used). Result: `results/2026-11-17_nvidia-nemotron-3-ultra-550b-a55b-free.json` (UTC date in file name).
 - Next: rerun q18-q30 after the quota resets, or use a key with credit.
 
+### 2026-11-18: Finish the eval (q18-q30)
+
+- Added `--start` and `--out` to `eval/run.py` to run only the unscored questions.
+- `eval/run.py --fixtures tests/fixtures --start 17`: 13 / 13 correct, 3.15 API calls per answer, no errors.
+- Merged with q01-q17 into one 30-question file: 30 / 30 correct, 2.47 API calls per answer.
+
 ## Issues
 
 - **api.meraki.com 401, shard host 200.** Symptom: new sandbox key got 401 `No valid authentication method found` on api.meraki.com, 200 on `n190.dashboard.meraki.com`. Cause: likely key propagation to the global host lags for a brand-new key. Fix: use the shard host via `MERAKI_BASE_URL` until api.meraki.com accepts the key; it did about an hour later, so the default works once propagated.
@@ -74,3 +81,4 @@ Dated record of steps, measurements, and issues. Raw eval output lives in `resul
 - **mcp 2.x renamed FastMCP.** `from mcp.server.fastmcp import FastMCP` fails in 2.3.0. Fix: use `mcp.server.mcpserver.MCPServer`; tool schema attribute is `input_schema`.
 - **Retry gave the wrong error.** The last 429 fell through to the generic HTTP error, so "rate limited" never surfaced. Caught by a test; fixed by breaking out on the final attempt.
 - **OASF record rejected at first.** Validator flagged the skill path and `locators[].url`. Fix: full skill path from the schema (`ai_ml_engineering/retrieval_augmented_generation/...`) and `urls` as a list; MCP module needs `data.name` and `data.connections`.
+- **DevNet sandbox reservation expired before q18-q30 ran.** The Meraki key returned `401 Invalid API key` on both `n190.dashboard.meraki.com` and `api.meraki.com`. Cause: reserved sandboxes are deleted when the reservation ends. Fix: ran q18-q30 against `tests/fixtures`, which are real responses recorded from the same sandbox, so `truth.json` still matches. A new live run needs a new reservation and a rebuilt `truth.json`.

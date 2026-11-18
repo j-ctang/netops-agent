@@ -1,0 +1,754 @@
+{
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "truth_source": "https://n190.dashboard.meraki.com/api/v1",
+  "run_at": [
+    "2026-11-17T00:43:17+00:00",
+    "2026-11-18T00:20:02+00:00"
+  ],
+  "correct": 30,
+  "total": 30,
+  "mean_api_calls": 2.47,
+  "rows": [
+    {
+      "id": "q01",
+      "question": "How many organizations can this API key access?",
+      "expected": {
+        "type": "number",
+        "value": 1
+      },
+      "answer": "This API key can access **1 organization**:\n\n- **DevNet-47LAwcsYS1sK** (ID: 669910444571370859)",
+      "correct": true,
+      "api_calls": 1,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q02",
+      "question": "What are the names of the organizations this API key can access?",
+      "expected": {
+        "type": "set",
+        "value": [
+          "DevNet-47LAwcsYS1sK"
+        ]
+      },
+      "answer": "The API key can access **1 organization**:\n\n- **DevNet-47LAwcsYS1sK** (ID: 669910444571370859)",
+      "correct": true,
+      "api_calls": 1,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q03",
+      "question": "How many networks are there in total across all organizations?",
+      "expected": {
+        "type": "number",
+        "value": 1
+      },
+      "answer": "There is **1 network** total across all organizations.\n\n- Organization: DevNet-47LAwcsYS1sK (ID: 669910444571370859)\n- Network: branch_office (ID: L_669910444571385303)",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q04",
+      "question": "List the names of all networks.",
+      "expected": {
+        "type": "set",
+        "value": [
+          "branch_office"
+        ]
+      },
+      "answer": "The organization has one network:\n\n- **branch_office** (ID: L_669910444571385303) \u2014 product types: appliance, camera, switch, wireless",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q05",
+      "question": "Which networks include wireless?",
+      "expected": {
+        "type": "set",
+        "value": [
+          "branch_office"
+        ]
+      },
+      "answer": "The organization **DevNet-47LAwcsYS1sK** (ID: 669910444571370859) has one network that includes wireless:\n\n- **branch_office** (ID: L_669910444571385303) \u2013 productTypes: appliance, camera, switch, **wireless**",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q06",
+      "question": "Which networks include an appliance (MX)?",
+      "expected": {
+        "type": "set",
+        "value": [
+          "branch_office"
+        ]
+      },
+      "answer": "The organization **DevNet-47LAwcsYS1sK** has one network that includes an appliance (MX):\n\n- **Network:** branch_office  \n- **Network ID:** L_669910444571385303  \n- **Product types:** appliance, camera, switch, wireless",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q07",
+      "question": "How many devices are there in total across all organizations?",
+      "expected": {
+        "type": "number",
+        "value": 4
+      },
+      "answer": "There are **4 devices** total across the single organization (DevNet-47LAwcsYS1sK).",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q08",
+      "question": "How many switches are there in total?",
+      "expected": {
+        "type": "number",
+        "value": 1
+      },
+      "answer": "There is **1 switch** in total in the organization \"DevNet-47LAwcsYS1sK\" (serial: QBSB-DU4U-25UB, model: MS250-24).",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"switch\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q09",
+      "question": "How many wireless access points are there in total?",
+      "expected": {
+        "type": "number",
+        "value": 1
+      },
+      "answer": "There is **1 wireless access point** in total (an MR52, serial QBSC-C83J-XEMY).",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"wireless\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q10",
+      "question": "How many security appliances are there in total?",
+      "expected": {
+        "type": "number",
+        "value": 1
+      },
+      "answer": "There is **1 security appliance** in total: an MX100 (serial QBSA-BT9H-9GNH) in network L_669910444571385303.",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"appliance\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q11",
+      "question": "Which devices are offline? Give their names.",
+      "expected": {
+        "type": "set",
+        "value": []
+      },
+      "answer": "No devices are currently offline in the organization **DevNet-47LAwcsYS1sK**.",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "get_device_statuses",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"status\":\"offline\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q12",
+      "question": "Which devices are alerting? Give their names.",
+      "expected": {
+        "type": "set",
+        "value": []
+      },
+      "answer": "No devices are currently alerting in the organization **DevNet-47LAwcsYS1sK**.",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "get_device_statuses",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"status\":\"alerting\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q13",
+      "question": "Which devices are dormant? Give their names.",
+      "expected": {
+        "type": "set",
+        "value": [
+          "QBSA-BT9H-9GNH",
+          "QBSB-DU4U-25UB",
+          "QBSC-C83J-XEMY",
+          "QBSD-CF57-HTY7"
+        ]
+      },
+      "answer": "**Dormant devices in organization \"DevNet-47LAwcsYS1sK\" (4 total):**\n\n| Serial | Model | Product Type | Network ID |\n|--------|-------|--------------|------------|\n| QBSA-BT9H-9GNH | MX100 | appliance | L_669910444571385303 |\n| QBSB-DU4U-25UB | MS250-24 | switch | L_669910444571385303 |\n| QBSC-C83J-XEMY | MR52 | wireless | L_669910444571385303 |\n| QBSD-CF57-HTY7 | MV12W | camera | L_669910444571385303 |\n\n**Note:** All four devices have empty `name` fields in Meraki (no friendly name configured). They are identified by serial and model above.",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "get_device_statuses",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"status\":\"dormant\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q14",
+      "question": "How many devices are online?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "There are **0 devices online** in the organization \"DevNet-47LAwcsYS1sK\".",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "get_device_statuses",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"status\":\"online\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q15",
+      "question": "How many devices are not online (offline, alerting, or dormant)?",
+      "expected": {
+        "type": "number",
+        "value": 4
+      },
+      "answer": "There are **4 devices** not online (all 4 are dormant).",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "get_device_statuses",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q16",
+      "question": "Which device model appears most often?",
+      "expected": {
+        "type": "any_of",
+        "value": [
+          "MR52",
+          "MS250-24",
+          "MV12W",
+          "MX100"
+        ]
+      },
+      "answer": "All four device models appear exactly once each, so there's no single model that appears most often:\n\n- **MX100** (appliance) \u2013 1\n- **MS250-24** (switch) \u2013 1\n- **MR52** (wireless) \u2013 1\n- **MV12W** (camera) \u2013 1\n\nAll models are tied at a count of 1.",
+      "correct": true,
+      "api_calls": 2,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q17",
+      "question": "Which network has the most devices?",
+      "expected": {
+        "type": "any_of",
+        "value": [
+          "branch_office"
+        ]
+      },
+      "answer": "The organization has only one network: **branch_office** (ID: L_669910444571385303) with **4 devices** (1 appliance, 1 switch, 1 wireless AP, 1 camera).",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"network_id\":\"L_669910444571385303\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q18",
+      "question": "How many switch ports are connected across all switches?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "**0 switch ports are connected** across all switches.\n\nThe organization has one switch (MS250\u201124, serial `QBSB-DU4U-25UB`) with 30 ports, and every port currently reports a status of **\u201cDisconnected.\u201d**",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"switch\"}"
+        },
+        {
+          "name": "get_switch_port_statuses",
+          "arguments": "{\"serial\":\"QBSB-DU4U-25UB\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q19",
+      "question": "How many switch ports are disabled across all switches?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "**0** switch ports are disabled across all switches.\n\nThe organization has one switch (MS250\u201124, serial `QBSB-DU4U-25UB`) with 30 ports, and every port shows `\"enabled\": true`.",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"switch\"}"
+        },
+        {
+          "name": "get_switch_port_statuses",
+          "arguments": "{\"serial\":\"QBSB-DU4U-25UB\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q20",
+      "question": "How many switch ports are enabled but disconnected across all switches?",
+      "expected": {
+        "type": "number",
+        "value": 30
+      },
+      "answer": "There is **1 switch** in the organization (MS250\u201124, serial **QBSB\u2011DU4U\u201125UB**). All **30 ports** on that switch are **enabled** but show a status of **\u201cDisconnected.\u201d**\n\n**Total enabled\u2011but\u2011disconnected switch ports: 30.**",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "get_switch_port_statuses",
+          "arguments": "{\"serial\":\"QBSB-DU4U-25UB\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q21",
+      "question": "Which switches have at least one port reporting errors? Give their names.",
+      "expected": {
+        "type": "set",
+        "value": [
+          "QBSB-DU4U-25UB"
+        ]
+      },
+      "answer": "**Switch with ports reporting errors:**\n\n- **QBSB-DU4U-25UB** (MS250-24) \u2014 all 30 ports show `\"errors\": [\"Port disconnected\"]`",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"switch\"}"
+        },
+        {
+          "name": "get_switch_port_statuses",
+          "arguments": "{\"serial\":\"QBSB-DU4U-25UB\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q22",
+      "question": "How many connected switch ports are running below 1 Gbps?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "**0** connected switch ports are running below 1\u202fGbps.\n\nThe only switch in the organization (MS250\u201124, serial `QBSB-DU4U-25UB`) has 30 ports, all of which are currently **Disconnected** (no link, no speed reported). Since no ports are connected, none can be operating below 1\u202fGbps.",
+      "correct": true,
+      "api_calls": 4,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"switch\"}"
+        },
+        {
+          "name": "get_switch_port_statuses",
+          "arguments": "{\"serial\":\"QBSB-DU4U-25UB\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q23",
+      "question": "Which switch has the most connected ports?",
+      "expected": {
+        "type": "any_of",
+        "value": [
+          "QBSB-DU4U-25UB"
+        ]
+      },
+      "answer": "The organization has only one switch: **QBSB-DU4U-25UB** (MS250-24).  \n\nAll 30 of its ports are currently **Disconnected** (0 connected ports). Since it\u2019s the only switch, it has the most connected ports by default\u2014**0 connected ports**.",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"switch\"}"
+        },
+        {
+          "name": "get_switch_port_statuses",
+          "arguments": "{\"serial\":\"QBSB-DU4U-25UB\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q24",
+      "question": "How many switch ports are drawing PoE power?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "0 switch ports are drawing PoE power. All 30 ports on the MS250-24 (serial QBSB-DU4U-25UB) show `powerUsageInWh: null` and status \"Disconnected\".",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"product_type\":\"switch\"}"
+        },
+        {
+          "name": "get_switch_port_statuses",
+          "arguments": "{\"serial\":\"QBSB-DU4U-25UB\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q25",
+      "question": "Which SSID has the most clients across all networks in the last day?",
+      "expected": {
+        "type": "set",
+        "value": []
+      },
+      "answer": "No SSID had any clients in the last 24 hours across the organization's networks. The single network \"branch_office\" (L_669910444571385303) returned an empty client count for all SSIDs.",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "get_client_counts_per_ssid",
+          "arguments": "{\"network_id\":\"L_669910444571385303\",\"timespan_seconds\":86400}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q26",
+      "question": "How many wireless clients were seen in the last day across all networks?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "**0 wireless clients** were seen in the last day across all networks. The single network (`branch_office`, ID `L_669910444571385303`) has wireless enabled, but the per\u2011SSID client counts for the past 24\u202fhours returned no data.",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "get_client_counts_per_ssid",
+          "arguments": "{\"network_id\":\"L_669910444571385303\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q27",
+      "question": "How many distinct SSIDs had clients in the last day?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "0 distinct SSIDs had clients in the last day.",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "get_client_counts_per_ssid",
+          "arguments": "{\"network_id\":\"L_669910444571385303\",\"timespan_seconds\":86400}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q28",
+      "question": "How many switch port status change events (port_status) are in the switch event logs?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "There are **0** switch port status change events (port_status) in the switch event logs for the \"branch_office\" network.",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "get_network_events",
+          "arguments": "{\"network_id\":\"L_669910444571385303\",\"product_type\":\"switch\",\"event_type\":\"port_status\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q29",
+      "question": "Which switch logged the most port_status events?",
+      "expected": {
+        "type": "set",
+        "value": []
+      },
+      "answer": "Based on the event logs for the **branch_office** network (L_669910444571385303), there are **no `port_status` events recorded** for any switch. The network contains only one switch:\n\n- **Serial:** QBSB-DU4U-25UB  \n- **Model:** MS250-24  \n\nSince the event log returns an empty list for `port_status` events, this switch has **0 port_status events** logged.",
+      "correct": true,
+      "api_calls": 4,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "get_network_events",
+          "arguments": "{\"network_id\":\"L_669910444571385303\",\"product_type\":\"switch\",\"event_type\":\"port_status\",\"per_page\":100}"
+        },
+        {
+          "name": "list_devices",
+          "arguments": "{\"org_id\":\"669910444571370859\",\"network_id\":\"L_669910444571385303\",\"product_type\":\"switch\"}"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "q30",
+      "question": "How many wireless events are in the event logs across all networks?",
+      "expected": {
+        "type": "number",
+        "value": 0
+      },
+      "answer": "There are **0 wireless events** in the event logs across all networks. The single network \"branch_office\" (L_669910444571385303) in organization \"DevNet-47LAwcsYS1sK\" has wireless product type, but its wireless event log is empty.",
+      "correct": true,
+      "api_calls": 3,
+      "tool_calls": [
+        {
+          "name": "list_organizations",
+          "arguments": "{}"
+        },
+        {
+          "name": "list_networks",
+          "arguments": "{\"org_id\":\"669910444571370859\"}"
+        },
+        {
+          "name": "get_network_events",
+          "arguments": "{\"network_id\":\"L_669910444571385303\",\"product_type\":\"wireless\"}"
+        }
+      ],
+      "error": null
+    }
+  ],
+  "note": "q01-q17 live sandbox (n190) 2026-11-17; q18-q30 replayed from tests/fixtures (recorded from same sandbox) 2026-11-18 after sandbox reservation expired"
+}
