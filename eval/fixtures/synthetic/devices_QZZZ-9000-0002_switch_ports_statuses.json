@@ -1,0 +1,12 @@
+[
+  {"portId": "1", "enabled": true, "status": "Connected", "speed": "1 Gbps", "duplex": "full", "errors": [], "isUplink": false, "powerUsageInWh": 0},
+  {"portId": "2", "enabled": true, "status": "Connected", "speed": "100 Mbps", "duplex": "full", "errors": ["High CRC error rate"], "isUplink": false, "powerUsageInWh": 0},
+  {"portId": "3", "enabled": true, "status": "Connected", "speed": "1 Gbps", "duplex": "full", "errors": [], "isUplink": false, "powerUsageInWh": 1.2},
+  {"portId": "4", "enabled": true, "status": "Connected", "speed": "1 Gbps", "duplex": "full", "errors": [], "isUplink": false, "powerUsageInWh": 2.5},
+  {"portId": "5", "enabled": true, "status": "Connected", "speed": "1 Gbps", "duplex": "full", "errors": [], "isUplink": false, "powerUsageInWh": 0},
+  {"portId": "6", "enabled": true, "status": "Disconnected", "speed": null, "duplex": null, "errors": [], "isUplink": false, "powerUsageInWh": 0},
+  {"portId": "7", "enabled": true, "status": "Disconnected", "speed": null, "duplex": null, "errors": [], "isUplink": false, "powerUsageInWh": 0},
+  {"portId": "8", "enabled": false, "status": "Disabled", "speed": null, "duplex": null, "errors": [], "isUplink": false, "powerUsageInWh": 0},
+  {"portId": "9", "enabled": true, "status": "Connected", "speed": "1 Gbps", "duplex": "full", "errors": [], "isUplink": true, "powerUsageInWh": 0},
+  {"portId": "10", "enabled": true, "status": "Disconnected", "speed": null, "duplex": null, "errors": [], "isUplink": false, "powerUsageInWh": 0}
+]

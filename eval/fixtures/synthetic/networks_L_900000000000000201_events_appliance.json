@@ -1,0 +1,15 @@
+{
+  "pageStartAt": "2026-11-19T14:59:00Z",
+  "pageEndAt": "2026-11-19T14:59:00Z",
+  "events": [
+    {
+      "occurredAt": "2026-11-19T14:59:00Z",
+      "type": "dhcp_lease",
+      "description": "dhcp lease",
+      "deviceSerial": "QZZZ-9000-0010",
+      "deviceName": "Harbor-Gateway",
+      "eventData": {},
+      "networkId": "L_900000000000000201"
+    }
+  ]
+}

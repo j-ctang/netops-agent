@@ -61,6 +61,17 @@ uv run pytest                                         # offline tests
 
 `eval/truth.json` and `tests/fixtures` come from a live DevNet Meraki sandbox recorded 2026-11-16. That sandbox is small and idle, so many answers are 0 or none (see LOG.md).
 
+## Synthetic benchmark
+
+```sh
+uv run python eval/run.py --synthetic
+uv run python eval/build_truth.py --synthetic  # refresh expected answers after editing fixtures
+```
+
+The synthetic suite reuses the 30 questions with [invented Meraki data](eval/fixtures/synthetic) spanning two organizations and three networks. Wired clients, unrelated switch events, mixed device and port states, and a tied model ranking exercise filtering and aggregation. The runner checks complete JSON answers and reports accuracy, API requests per question, and mean API requests across the run. Failed questions still count toward both metrics.
+
+Meraki requests replay locally without credentials. The runner uses the configured LLM endpoint. For a fully offline model run, set `LLM_BASE_URL` to a local OpenAI-compatible endpoint that supports tool calls, set `LLM_MODEL` to its model, and provide a nonempty `LLM_API_KEY` accepted by that endpoint. The test suite also exercises the benchmark with a scripted model and needs no endpoint.
+
 ## Evaluation workflow
 
 ![Workflow map showing the Meraki data source, evaluation inputs, scoring, and issues encountered](docs/eval-workflow.svg)

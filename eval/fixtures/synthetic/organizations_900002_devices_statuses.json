@@ -1,0 +1,4 @@
+[
+  {"serial": "QZZZ-9000-0010", "name": "Harbor-Gateway", "model": "MX85", "productType": "appliance", "networkId": "L_900000000000000201", "status": "offline", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0011", "name": "Harbor-Access", "model": "MS120-8LP", "productType": "switch", "networkId": "L_900000000000000201", "status": "alerting", "lastReportedAt": "2026-11-19T15:00:00Z"}
+]

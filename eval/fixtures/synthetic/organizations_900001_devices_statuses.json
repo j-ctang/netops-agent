@@ -1,0 +1,11 @@
+[
+  {"serial": "QZZZ-9000-0001", "name": "HQ-Gateway", "model": "MX85", "productType": "appliance", "networkId": "L_900000000000000101", "status": "online", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0002", "name": "HQ-Access", "model": "MS120-8LP", "productType": "switch", "networkId": "L_900000000000000101", "status": "online", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0003", "name": "HQ-Lab", "model": "MS120-8LP", "productType": "switch", "networkId": "L_900000000000000101", "status": "alerting", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0004", "name": "HQ-East-AP", "model": "MR36", "productType": "wireless", "networkId": "L_900000000000000101", "status": "online", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0005", "name": "HQ-West-AP", "model": "MR36", "productType": "wireless", "networkId": "L_900000000000000101", "status": "offline", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0006", "name": "HQ-Lobby-AP", "model": "MR46", "productType": "wireless", "networkId": "L_900000000000000101", "status": "online", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0007", "name": "Juniper-Access", "model": "MS120-8LP", "productType": "switch", "networkId": "L_900000000000000102", "status": "online", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0008", "name": "Juniper-Floor-AP", "model": "MR36", "productType": "wireless", "networkId": "L_900000000000000102", "status": "online", "lastReportedAt": "2026-11-19T15:00:00Z"},
+  {"serial": "QZZZ-9000-0009", "name": "Juniper-Stock-AP", "model": "MR36", "productType": "wireless", "networkId": "L_900000000000000102", "status": "dormant", "lastReportedAt": "2026-11-19T15:00:00Z"}
+]

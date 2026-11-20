@@ -1,0 +1,39 @@
+{
+  "pageStartAt": "2026-11-19T14:57:00Z",
+  "pageEndAt": "2026-11-19T14:59:00Z",
+  "events": [
+    {
+      "occurredAt": "2026-11-19T14:59:00Z",
+      "type": "port_status",
+      "description": "port status",
+      "deviceSerial": "QZZZ-9000-0007",
+      "deviceName": "Juniper-Access",
+      "eventData": {
+        "port": "2"
+      },
+      "networkId": "L_900000000000000102"
+    },
+    {
+      "occurredAt": "2026-11-19T14:58:00Z",
+      "type": "port_status",
+      "description": "port status",
+      "deviceSerial": "QZZZ-9000-0007",
+      "deviceName": "Juniper-Access",
+      "eventData": {
+        "port": "2"
+      },
+      "networkId": "L_900000000000000102"
+    },
+    {
+      "occurredAt": "2026-11-19T14:57:00Z",
+      "type": "stp_bpdu",
+      "description": "stp bpdu",
+      "deviceSerial": "QZZZ-9000-0007",
+      "deviceName": "Juniper-Access",
+      "eventData": {
+        "port": "2"
+      },
+      "networkId": "L_900000000000000102"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+[
+  {"id": "L_900000000000000101", "name": "Northstar Headquarters", "productTypes": ["appliance", "switch", "wireless"], "tags": ["hq"], "organizationId": "900001"},
+  {"id": "L_900000000000000102", "name": "Juniper Store", "productTypes": ["switch", "wireless"], "tags": ["retail"], "organizationId": "900001"}
+]

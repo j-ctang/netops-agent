@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter
 from dataclasses import dataclass
@@ -124,6 +125,29 @@ def truth(kind: str, p: dict[str, Any], s: Snapshot) -> dict[str, Any]:
             evs = [e for e in s.events[p["product_type"]] if e.get("type") == p["event_type"]]
             return _any(Counter(e.get("deviceName") or e.get("deviceSerial") for e in evs))
     raise ValueError(f"unknown question kind {kind}")
+
+
+def score_json(answer: str, expected: dict[str, Any]) -> bool:
+    """Score a whole JSON answer so extra numbers or names cannot count as correct."""
+    text = answer.strip()
+    fence = re.fullmatch(r"```(?:json)?\s*(.*?)\s*```", text, re.DOTALL | re.IGNORECASE)
+    try:
+        actual = json.loads(fence[1] if fence else text)
+    except ValueError:
+        return False
+    value = expected["value"]
+    match expected["type"]:
+        case "number":
+            return type(actual) is int and actual == value
+        case "set":
+            return (
+                isinstance(actual, list)
+                and all(isinstance(item, str) for item in actual)
+                and Counter(item.casefold() for item in actual) == Counter(item.casefold() for item in value)
+            )
+        case "any_of":
+            return isinstance(actual, str) and actual.casefold() in {item.casefold() for item in value}
+    raise ValueError(expected["type"])
 
 
 def score(answer: str, expected: dict[str, Any]) -> bool:

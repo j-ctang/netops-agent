@@ -1,0 +1,51 @@
+{
+  "pageStartAt": "2026-11-19T14:55:00Z",
+  "pageEndAt": "2026-11-19T14:59:00Z",
+  "events": [
+    {
+      "occurredAt": "2026-11-19T14:59:00Z",
+      "type": "association",
+      "description": "association",
+      "deviceSerial": "QZZZ-9000-0004",
+      "deviceName": "HQ-East-AP",
+      "eventData": {},
+      "networkId": "L_900000000000000101"
+    },
+    {
+      "occurredAt": "2026-11-19T14:58:00Z",
+      "type": "association",
+      "description": "association",
+      "deviceSerial": "QZZZ-9000-0004",
+      "deviceName": "HQ-East-AP",
+      "eventData": {},
+      "networkId": "L_900000000000000101"
+    },
+    {
+      "occurredAt": "2026-11-19T14:57:00Z",
+      "type": "association",
+      "description": "association",
+      "deviceSerial": "QZZZ-9000-0004",
+      "deviceName": "HQ-East-AP",
+      "eventData": {},
+      "networkId": "L_900000000000000101"
+    },
+    {
+      "occurredAt": "2026-11-19T14:56:00Z",
+      "type": "disassociation",
+      "description": "disassociation",
+      "deviceSerial": "QZZZ-9000-0006",
+      "deviceName": "HQ-Lobby-AP",
+      "eventData": {},
+      "networkId": "L_900000000000000101"
+    },
+    {
+      "occurredAt": "2026-11-19T14:55:00Z",
+      "type": "disassociation",
+      "description": "disassociation",
+      "deviceSerial": "QZZZ-9000-0006",
+      "deviceName": "HQ-Lobby-AP",
+      "eventData": {},
+      "networkId": "L_900000000000000101"
+    }
+  ]
+}

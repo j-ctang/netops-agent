@@ -1,0 +1,10 @@
+[
+  {"id": "k3001", "mac": "02:00:00:00:03:01", "ip": "192.0.2.151", "ssid": null, "status": "Online"},
+  {"id": "k3002", "mac": "02:00:00:00:03:02", "ip": "192.0.2.152", "ssid": null, "status": "Online"},
+  {"id": "k3003", "mac": "02:00:00:00:03:03", "ip": "192.0.2.153", "ssid": null, "status": "Online"},
+  {"id": "k3004", "mac": "02:00:00:00:03:04", "ip": "192.0.2.154", "ssid": null, "status": "Online"},
+  {"id": "k3005", "mac": "02:00:00:00:03:05", "ip": "192.0.2.155", "ssid": null, "status": "Online"},
+  {"id": "k3006", "mac": "02:00:00:00:03:06", "ip": "192.0.2.156", "ssid": null, "status": "Online"},
+  {"id": "k3007", "mac": "02:00:00:00:03:07", "ip": "192.0.2.157", "ssid": null, "status": "Online"},
+  {"id": "k3008", "mac": "02:00:00:00:03:08", "ip": "192.0.2.158", "ssid": null, "status": "Online"}
+]

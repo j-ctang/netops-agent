@@ -1,0 +1,20 @@
+[
+  {"id": "k1001", "mac": "02:00:00:00:01:01", "ip": "192.0.2.51", "ssid": "Staff", "status": "Online"},
+  {"id": "k1002", "mac": "02:00:00:00:01:02", "ip": "192.0.2.52", "ssid": "Staff", "status": "Online"},
+  {"id": "k1003", "mac": "02:00:00:00:01:03", "ip": "192.0.2.53", "ssid": "Staff", "status": "Online"},
+  {"id": "k1004", "mac": "02:00:00:00:01:04", "ip": "192.0.2.54", "ssid": "Staff", "status": "Online"},
+  {"id": "k1005", "mac": "02:00:00:00:01:05", "ip": "192.0.2.55", "ssid": "Guest", "status": "Online"},
+  {"id": "k1006", "mac": "02:00:00:00:01:06", "ip": "192.0.2.56", "ssid": "Guest", "status": "Online"},
+  {"id": "k1007", "mac": "02:00:00:00:01:07", "ip": "192.0.2.57", "ssid": "Guest", "status": "Online"},
+  {"id": "k1008", "mac": "02:00:00:00:01:08", "ip": "192.0.2.58", "ssid": "Guest", "status": "Online"},
+  {"id": "k1009", "mac": "02:00:00:00:01:09", "ip": "192.0.2.59", "ssid": "Guest", "status": "Online"},
+  {"id": "k1010", "mac": "02:00:00:00:01:0a", "ip": "192.0.2.60", "ssid": "Lab", "status": "Online"},
+  {"id": "k1011", "mac": "02:00:00:00:01:0b", "ip": "192.0.2.61", "ssid": "Lab", "status": "Online"},
+  {"id": "k1012", "mac": "02:00:00:00:01:0c", "ip": "192.0.2.62", "ssid": null, "status": "Online"},
+  {"id": "k1013", "mac": "02:00:00:00:01:0d", "ip": "192.0.2.63", "ssid": null, "status": "Online"},
+  {"id": "k1014", "mac": "02:00:00:00:01:0e", "ip": "192.0.2.64", "ssid": null, "status": "Online"},
+  {"id": "k1015", "mac": "02:00:00:00:01:0f", "ip": "192.0.2.65", "ssid": null, "status": "Online"},
+  {"id": "k1016", "mac": "02:00:00:00:01:10", "ip": "192.0.2.66", "ssid": null, "status": "Online"},
+  {"id": "k1017", "mac": "02:00:00:00:01:11", "ip": "192.0.2.67", "ssid": null, "status": "Online"},
+  {"id": "k1018", "mac": "02:00:00:00:01:12", "ip": "192.0.2.68", "ssid": null, "status": "Online"}
+]

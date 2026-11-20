@@ -1,0 +1,161 @@
+{
+  "source": "fixtures:eval/fixtures/synthetic",
+  "api_calls": 21,
+  "truth": {
+    "q01": {
+      "type": "number",
+      "value": 2
+    },
+    "q02": {
+      "type": "set",
+      "value": [
+        "Harbor Logistics",
+        "Northstar Retail"
+      ]
+    },
+    "q03": {
+      "type": "number",
+      "value": 3
+    },
+    "q04": {
+      "type": "set",
+      "value": [
+        "Harbor Depot",
+        "Juniper Store",
+        "Northstar Headquarters"
+      ]
+    },
+    "q05": {
+      "type": "set",
+      "value": [
+        "Juniper Store",
+        "Northstar Headquarters"
+      ]
+    },
+    "q06": {
+      "type": "set",
+      "value": [
+        "Harbor Depot",
+        "Northstar Headquarters"
+      ]
+    },
+    "q07": {
+      "type": "number",
+      "value": 11
+    },
+    "q08": {
+      "type": "number",
+      "value": 4
+    },
+    "q09": {
+      "type": "number",
+      "value": 5
+    },
+    "q10": {
+      "type": "number",
+      "value": 2
+    },
+    "q11": {
+      "type": "set",
+      "value": [
+        "HQ-West-AP",
+        "Harbor-Gateway"
+      ]
+    },
+    "q12": {
+      "type": "set",
+      "value": [
+        "HQ-Lab",
+        "Harbor-Access"
+      ]
+    },
+    "q13": {
+      "type": "set",
+      "value": [
+        "Juniper-Stock-AP"
+      ]
+    },
+    "q14": {
+      "type": "number",
+      "value": 6
+    },
+    "q15": {
+      "type": "number",
+      "value": 5
+    },
+    "q16": {
+      "type": "any_of",
+      "value": [
+        "MR36",
+        "MS120-8LP"
+      ]
+    },
+    "q17": {
+      "type": "any_of",
+      "value": [
+        "Northstar Headquarters"
+      ]
+    },
+    "q18": {
+      "type": "number",
+      "value": 19
+    },
+    "q19": {
+      "type": "number",
+      "value": 4
+    },
+    "q20": {
+      "type": "number",
+      "value": 17
+    },
+    "q21": {
+      "type": "set",
+      "value": [
+        "HQ-Access",
+        "Harbor-Access"
+      ]
+    },
+    "q22": {
+      "type": "number",
+      "value": 3
+    },
+    "q23": {
+      "type": "any_of",
+      "value": [
+        "HQ-Access"
+      ]
+    },
+    "q24": {
+      "type": "number",
+      "value": 5
+    },
+    "q25": {
+      "type": "any_of",
+      "value": [
+        "Staff"
+      ]
+    },
+    "q26": {
+      "type": "number",
+      "value": 16
+    },
+    "q27": {
+      "type": "number",
+      "value": 3
+    },
+    "q28": {
+      "type": "number",
+      "value": 10
+    },
+    "q29": {
+      "type": "any_of",
+      "value": [
+        "HQ-Access"
+      ]
+    },
+    "q30": {
+      "type": "number",
+      "value": 7
+    }
+  }
+}
