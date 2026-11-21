@@ -20,6 +20,14 @@ def test_sends_bearer_key_and_base_url():
     assert seen == {"auth": "Bearer k", "url": "https://api.meraki.com/api/v1/organizations"}
 
 
+def test_context_manager_closes_http_client():
+    c = make(lambda req: httpx.Response(200, json=[]))
+    with c as managed:
+        assert managed is c
+        assert not c._http.is_closed
+    assert c._http.is_closed
+
+
 def test_retries_429_using_retry_after():
     waits, codes = [], iter([429, 429, 200])
 

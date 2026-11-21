@@ -7,7 +7,7 @@ import os
 import time
 from collections.abc import Callable
 from pathlib import Path
-from typing import Any
+from typing import Any, Self
 
 import httpx
 
@@ -39,6 +39,16 @@ class MerakiClient:
             transport=transport,
             follow_redirects=True,
         )
+
+    def close(self) -> None:
+        """Close the underlying HTTP connection pool."""
+        self._http.close()
+
+    def __enter__(self) -> Self:
+        return self
+
+    def __exit__(self, *_: object) -> None:
+        self.close()
 
     def get(self, path: str, params: dict[str, Any] | None = None) -> Any:
         """GET a path; follow Link rel=next pages for list responses."""

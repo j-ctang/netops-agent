@@ -80,6 +80,14 @@ def test_openai_compatible_request_shape(monkeypatch):
     assert sent["body"]["model"] == "google/gemma-4-31b-it:free"
 
 
+def test_chat_context_manager_closes_http_client():
+    chat = OpenAICompatibleChat(api_key="sk", transport=httpx.MockTransport(lambda req: httpx.Response(200)))
+    with chat as managed:
+        assert managed is chat
+        assert not chat._http.is_closed
+    assert chat._http.is_closed
+
+
 def test_missing_llm_key_is_clear(monkeypatch):
     monkeypatch.delenv("LLM_API_KEY", raising=False)
     with pytest.raises(RuntimeError, match="LLM_API_KEY"):
