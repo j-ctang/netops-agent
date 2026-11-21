@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from contextlib import ExitStack
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -66,19 +67,22 @@ def main() -> None:
     ap.add_argument("--start", type=int, default=0, help="skip the first N questions")
     ap.add_argument("--out", help="output path (default results/<date>_<model>.json)")
     args = ap.parse_args()
-    client = (
-        MerakiClient(api_key="offline", transport=FixtureTransport(args.fixtures)) if args.fixtures else MerakiClient()
-    )
-    llm = OpenAICompatibleChat()
-    out = run(llm, client, Path(args.truth), llm.model, args.limit, args.start)
-    RESULTS.mkdir(exist_ok=True)
-    path = (
-        Path(args.out)
-        if args.out
-        else RESULTS / f"{datetime.now(UTC):%Y-%m-%d}_{re.sub(r'[^A-Za-z0-9.-]+', '-', llm.model)}.json"
-    )
-    path.write_text(json.dumps(out, indent=2) + "\n")
-    print(f"{out['correct']}/{out['total']} correct, {out['mean_api_calls']} API calls per answer -> {path}")
+    with ExitStack() as stack:
+        client = stack.enter_context(
+            MerakiClient(api_key="offline", transport=FixtureTransport(args.fixtures))
+            if args.fixtures
+            else MerakiClient()
+        )
+        llm = stack.enter_context(OpenAICompatibleChat())
+        out = run(llm, client, Path(args.truth), llm.model, args.limit, args.start)
+        RESULTS.mkdir(exist_ok=True)
+        path = (
+            Path(args.out)
+            if args.out
+            else RESULTS / f"{datetime.now(UTC):%Y-%m-%d}_{re.sub(r'[^A-Za-z0-9.-]+', '-', llm.model)}.json"
+        )
+        path.write_text(json.dumps(out, indent=2) + "\n")
+        print(f"{out['correct']}/{out['total']} correct, {out['mean_api_calls']} API calls per answer -> {path}")
 
 
 if __name__ == "__main__":
