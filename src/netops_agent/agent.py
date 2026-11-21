@@ -8,7 +8,7 @@ import sys
 import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
-from typing import Any, Protocol
+from typing import Any, Protocol, Self
 
 import httpx
 
@@ -55,6 +55,16 @@ class OpenAICompatibleChat:
             timeout=120.0,
             transport=transport,
         )
+
+    def close(self) -> None:
+        """Close the underlying HTTP connection pool."""
+        self._http.close()
+
+    def __enter__(self) -> Self:
+        return self
+
+    def __exit__(self, *_: object) -> None:
+        self.close()
 
     def complete(self, messages: list[dict[str, Any]], tools: list[dict[str, Any]]) -> dict[str, Any]:
         payload = {"model": self.model, "messages": messages, "tools": tools, "temperature": 0}
@@ -121,7 +131,8 @@ class Agent:
 
 def main() -> None:
     question = " ".join(sys.argv[1:]) or "Which devices are offline?"
-    result = Agent(OpenAICompatibleChat(), MerakiClient()).ask(question)
+    with OpenAICompatibleChat() as llm, MerakiClient() as client:
+        result = Agent(llm, client).ask(question)
     print(result.answer)
     print(f"[api_calls={result.api_calls} steps={result.steps}]", file=sys.stderr)
 

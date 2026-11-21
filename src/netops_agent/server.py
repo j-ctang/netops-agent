@@ -24,7 +24,11 @@ def build_server(client: MerakiClient | None = None) -> MCPServer:
 
 def main() -> None:
     transport = sys.argv[1] if len(sys.argv) > 1 else "stdio"
-    build_server().run(transport)  # type: ignore[arg-type]
+    client = MerakiClient()
+    try:
+        build_server(client).run(transport)  # type: ignore[arg-type]
+    finally:
+        client.close()
 
 
 if __name__ == "__main__":
